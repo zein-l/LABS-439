@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Remove Record</title>
+</head>
+<body>
+    <h2>Are you sure you want to remove {{ contact.name }}?</h2>
+    <form method="post">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+    <a href="{% url 'display_records' %}">Cancel</a>
+</body>
+</html>

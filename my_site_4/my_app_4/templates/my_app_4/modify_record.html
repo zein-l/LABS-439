@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Record</title>
+</head>
+<body>
+    <h2>Modify Record</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Update">
+    </form>
+    <a href="{% url 'display_records' %}">Back to Records Overview</a>
+</body>
+</html>

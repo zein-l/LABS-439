@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Add New Record</title>
+</head>
+<body>
+    <h2>Add a New Record</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" value="Submit">
+    </form>
+    <a href="{% url 'display_records' %}">View All Records</a>
+</body>
+</html>

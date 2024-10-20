@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records Overview</title>
+</head>
+<body>
+    <h2>All Records</h2>
+    <ul>
+        {% for contact in contacts %}
+        <li>{{ contact.name }} - {{ contact.tel_number }}
+            <a href="{% url 'modify_record' contact.id %}">Edit</a> |
+            <a href="{% url 'remove_record' contact.id %}">Delete</a>
+        </li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'add_record' %}">Add New Record</a>
+</body>
+</html>
+
